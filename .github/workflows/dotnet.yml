@@ -5,10 +5,10 @@ on: [push]
 jobs:
   welcome:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: welcome
-        run: echo "Hello guys"
+      - name: Hello message
+      - run: echo "Hello guys"
         
   build:
     runs-on: ubuntu-latest
