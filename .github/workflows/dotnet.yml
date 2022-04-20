@@ -1,13 +1,18 @@
 ﻿name: .NET
 
-on: [pull_request]
+on: [push]
 
 jobs:
   welcome:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
+    
     steps:
+      - name: welcome
+        run: echo "Hello guys"
+
+      - name: build 
       - uses: actions/checkout@v3
       - uses: actions/setup-dotnet@v2
-        with: 
+        with:
           dotnet-version: '3.1.x'
       - run: dotnet build ActionsKata
