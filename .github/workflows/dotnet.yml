@@ -7,12 +7,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: welcome
+        run: echo "Hello guys"
+        
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-dotnet@v2
         with:
           dotnet-version: '3.1.x'
-
-      - name: welcome
-        run: echo "Hello guys"
-      - name: build 
+      - name: build
       - run: dotnet build ActionsKata
